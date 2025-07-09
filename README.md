@@ -15,4 +15,4 @@
 ## 🛠️ Imagen de la práctica:
 ![Imagen de la práctica clase 1](assets/image.png)
 ![Imagen de la práctica clase con DAO](assets/image2.png)
-
+![Imagen de los ejercicios](assets/image3.png)
