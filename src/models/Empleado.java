@@ -11,6 +11,11 @@ public class Empleado implements Comparable<Empleado> {
         this.name = name;
         this.position = position;
     }
+ 
+
+    public Empleado(int id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;
@@ -34,8 +39,6 @@ public class Empleado implements Comparable<Empleado> {
         final int prime = 31;
         int result = 1;
         result = prime * result + id;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((position == null) ? 0 : position.hashCode());
         return result;
     }
 
@@ -54,13 +57,6 @@ public class Empleado implements Comparable<Empleado> {
         if (id != other.id) {
             return false;
         }
-        if (name == null) {
-            if (other.name != null) {
-                return false;
-            }
-        } else if (!name.equals(other.name)) {
-            return false;
-        }
         if (position == null) {
             if (other.position != null) {
                 return false;
@@ -74,19 +70,8 @@ public class Empleado implements Comparable<Empleado> {
     @Override
     public int compareTo(Empleado o) {
         // Comparar primero por id
-        int result = Integer.compare(this.id, o.id);
 
-        // Si id es igual, compara por name
-        if (result == 0) {
-            result = this.name.compareTo(o.name);
-        }
-
-        // Si name también es igual, compara por position
-        if (result == 0) {
-            result = this.position.compareTo(o.position);
-        }
-
-        return result;
+        return Integer.compare(this.id, o.id);
     }
 
 }
