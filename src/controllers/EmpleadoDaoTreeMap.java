@@ -1,16 +1,16 @@
 package controllers;
 
 import java.util.Map;
-import java.util.TreeMap;
 import models.Empleado;
 
-public  class EmpleadoDaoTreeMap implements  EmpleadoDao {
+public class EmpleadoDaoTreeMap implements EmpleadoDao {
 
     public Map<Empleado, Empleado> empleadosTree; // me imprime por nombres, el comparador te dice el orden de inserccion
-
-    public EmpleadoDaoTreeMap(Map<Empleado, Empleado> mapaEmpleado) {
-        this.empleadosTree = new TreeMap<>();
+  
+    public EmpleadoDaoTreeMap(Map<Empleado, Empleado> empleadosTree) {
+        this.empleadosTree = empleadosTree; // Usamos el mapa recibido
     }
+
 
     @Override
     public void add(Empleado emp) {

@@ -1,7 +1,6 @@
 package controllers;
 
 
-import java.util.HashMap;
 import java.util.Map;
 import models.Empleado;
 
@@ -9,8 +8,8 @@ public class EmpleadoDaoHashMap implements EmpleadoDao {
 
     public Map<Empleado, Empleado> empleadosHashMap; //No imprime en orden, no me asegura imprimir en orden
 
-    public EmpleadoDaoHashMap(Map<Empleado, Empleado> empleadosHashMap) {
-        this.empleadosHashMap = new HashMap<>();
+     public EmpleadoDaoHashMap(Map<Empleado, Empleado> empleadosHashMap) {
+        this.empleadosHashMap = empleadosHashMap;
     }
 
      @Override
